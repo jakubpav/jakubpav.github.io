@@ -1,2 +1,3 @@
-# jakubpav.GitHub.io
+# jakubpav.github.io
+
 My website
