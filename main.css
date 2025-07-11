@@ -2,6 +2,8 @@ header {
 	background: rgb(0, 0, 0);
 	margin: 0rem;
 	border-bottom: 1px solid rgb(105, 241, 8);
+	bottom: 0;
+	left: 0;
 }
 
 header,
@@ -36,8 +38,23 @@ body main {
 	background: rgb(0, 0, 0);
 	padding: 2rem;
 }
+
+footer {
+	font-size: 0.6rem;
+	padding: 0.3rem 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: rgb(0, 0, 0);
+	color: rgb(105, 241, 8);
+	text-align: center;
+	border-top: 1px solid rgb(105, 241, 8);
+	z-index: 100;
+}
+
 hr {
-    color: rgb(105, 241, 8);
+	color: rgb(105, 241, 8);
 }
 header h2 a,
 h1,
