@@ -1,35 +1,73 @@
-body {
-    background: #282c34;
-    color: #abb2bf;
-    font-family: 'Fira Mono', 'Consolas', 'Monaco', monospace;
-    margin: 0;
-    padding: 2rem;
+header {
+	background: rgb(0, 0, 0);
+	margin: 0rem;
+	border-bottom: 1px solid rgb(105, 241, 8);
 }
 
-h1, h2, h3 {
-    color: #61dafb;
-    font-weight: bold;
+header,
+header nav ul,
+header nav ul li {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	height: 4rem;
+}
+
+header nav ul li a {
+	color: rgb(105, 241, 8);
+	text-decoration: none;
+	font-size: 1.1rem;
+	transition: text-decoration 2s;
+	margin: 0 1rem;
+}
+
+header nav ul li a:hover {
+	text-decoration: underline;
+}
+
+body {
+	background: rgb(0, 0, 0);
+	color: rgb(105, 241, 8);
+	font-family: "Fira Mono", "Consolas", "Monaco", monospace;
+}
+
+body main {
+	background: rgb(0, 0, 0);
+	padding: 2rem;
+}
+hr {
+    color: rgb(105, 241, 8);
+}
+header h2 a,
+h1,
+h2,
+h3 {
+	color: rgb(105, 241, 8);
+	font-weight: bold;
+	margin: 0 1rem;
 }
 
 a {
-    color: #98c379;
-    text-decoration: none;
+	color: rgb(251, 251, 251);
+	text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
-code, pre {
-    background: #21252b;
-    color: #e06c75;
-    font-family: inherit;
-    padding: 0.2em 0.4em;
-    border-radius: 4px;
+code,
+pre {
+	background: rgb(0, 0, 0);
+	color: rgb(255, 0, 21);
+	font-family: inherit;
+	padding: 0.2em 0.4em;
+	border-radius: 4px;
 }
 
 pre {
-    padding: 1em;
-    overflow-x: auto;
-    margin: 1em 0;
+	padding: 1em;
+	overflow-x: auto;
+	margin: 1em 0;
 }
