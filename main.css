@@ -15,7 +15,7 @@ header nav ul li {
 }
 
 header button {
-    margin-left: auto;
+	margin-left: auto;
 }
 
 header nav ul li a {
@@ -27,7 +27,8 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-	text-decoration: underline;
+	opacity: 1;
+	text-shadow: 0 0 1px #69f108, 0 0 2px #69f108;
 }
 
 body {
@@ -39,7 +40,7 @@ body {
 }
 
 button {
-	background: rgb(22, 22, 22);
+	background: rgba(22, 22, 22, 0);
 	color: rgb(105, 241, 8);
 	opacity: 0.85;
 	border: none;
@@ -48,8 +49,8 @@ button {
 }
 
 .flicker {
-	animation: flicker-bg 2.5s infinite steps(2, end);
-	animation: flicker-text 2.5s infinite steps(2, end);
+	animation: flicker-text 2.5s infinite steps(2, end),
+		flicker-bg 2.5s infinite steps(2, end);
 }
 
 @keyframes flicker-text {
@@ -71,36 +72,27 @@ button {
 
 @keyframes flicker-bg {
 	0%,
-	18%,
-	22%,
 	40%,
-	58%,
-	62%,
 	80%,
-	98%,
 	100% {
-		background: rgb(0, 0, 0);
+		background: rgb(10, 10, 10);
 	}
 	10% {
 		background: rgb(15, 15, 15);
-	}
-	20% {
-		background: rgb(30, 30, 30);
 	}
 	30% {
 		background: rgb(10, 10, 10);
 	}
 	50% {
-		background: rgb(25, 25, 25);
+		background: rgb(20, 20, 20);
 	}
 	60% {
-		background: rgb(8, 8, 8);
+		background: rgb(12, 12, 12);
 	}
-	70% {
-		background: rgb(18, 18, 18);
-	}
+	20%,
+	70%,
 	90% {
-		background: rgb(22, 22, 22);
+		background: rgb(18, 18, 18);
 	}
 }
 
@@ -136,7 +128,8 @@ a {
 }
 
 a:hover {
-	text-decoration: underline;
+	opacity: 1;
+	text-shadow: 0 0 2px #69f108, 0 0 2px #69f108;
 }
 
 code,
