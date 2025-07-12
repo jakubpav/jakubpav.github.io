@@ -24,21 +24,31 @@
                 <li><a href="/main/about-me/index.html">About Me</a></li>
             </ul>
         </nav>
-        <button id="stop-flicker-btn" type="button">Stop Effect</button>
+        <button id="stop-flicker-btn" type="button"></button>
         <script>
-            let flicker = true;
-            document.getElementById('stop-flicker-btn').addEventListener('click', function () {
+            let flicker = localStorage.getItem('flicker-store');
+            let flickerSwitch = function () {
                 let button = document.getElementById('stop-flicker-btn');
-                if (flicker) {
-                    flicker = false;
+                if (flicker === 'started' || flicker === undefined || flicker === null) {
                     document.body.classList.remove('flicker');
+                    flicker = 'stopped';
                     button.textContent = 'Start Effect';
                 } else {
-                    flicker = true;
                     document.body.classList.add('flicker');
                     button.textContent = 'Stop Effect';
+                    flicker = 'started';
                 }
-            });
+                localStorage.setItem('flicker-store', flicker);
+            }
+            document.getElementById('stop-flicker-btn').addEventListener('click', flickerSwitch);
+            document.body.addEventListener('dblclick', flickerSwitch);
+            if (flicker === 'started') {
+                document.body.classList.add('flicker');
+                document.getElementById('stop-flicker-btn').textContent = 'Stop Effect';
+            } else {
+                document.body.classList.remove('flicker');
+                document.getElementById('stop-flicker-btn').textContent = 'Start Effect';
+            }
         </script>
     </header>
     <main> <h1>About Me</h1>
@@ -47,9 +57,9 @@
 <hr>
 <h2>Skills &amp; Tools</h2>
 <ul>
-<li><strong>Languages:</strong> <strong>C++</strong>, C, Python, JavaScript/TypeScript (past)</li>
-<li><strong>Areas:</strong> Embedded systems, fullstack development, backend infrastructure</li>
-<li><strong>Tools:</strong> Git, Linux, CMake, Docker, VSCode, CLion</li>
+<li><strong>Languages:</strong> <strong>C++</strong>, C, Python, JavaScript/TypeScript, SQL</li>
+<li><strong>Expiriences:</strong> <strong>Embedded systems</strong>, fullstack development, backend infrastructure</li>
+<li><strong>Tools:</strong> Git, CMake</li>
 </ul>
 <hr>
 <h2>Interests</h2>

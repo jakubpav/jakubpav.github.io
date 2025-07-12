@@ -113,6 +113,7 @@ footer {
 hr {
 	color: rgb(105, 241, 8);
 }
+
 header h2 a,
 h1,
 h2,
@@ -129,7 +130,7 @@ a {
 
 a:hover {
 	opacity: 1;
-	text-shadow: 0 0 2px #69f108, 0 0 2px #69f108;
+	text-shadow: 0 0 1px #69f108, 0 0 2px #69f108;
 }
 
 code,
