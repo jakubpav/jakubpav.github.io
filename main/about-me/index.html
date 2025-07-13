@@ -22,10 +22,9 @@
         <nav>
             <ul>
                 <li><a href="/main/about-me/">About Me</a></li>
-                <!-- <li><a href="/main/CV/index.html">CV</a></li> -->
+                <li><a href="https://rxresu.me/jakubpav/jakub-pavelka" target="_blank">CV</a></li>
             </ul>
         </nav>
-        <button id="stop-flicker-btn" type="button"></button>
         <script>
             let flicker = localStorage.getItem('flicker-store');
             let flickerSwitch = function () {
@@ -41,8 +40,11 @@
                 }
                 localStorage.setItem('flicker-store', flicker);
             }
-            document.getElementById('stop-flicker-btn').addEventListener('click', flickerSwitch);
             document.body.addEventListener('dblclick', flickerSwitch);
+            document.addEventListener('scroll', (event) => {
+                document.body.classList.add('flicker');
+                setTimeout(() => { document.body.classList.remove('flicker'); }, 1500);
+            });
             if (flicker === 'started') {
                 document.body.classList.add('flicker');
                 document.getElementById('stop-flicker-btn').textContent = 'Stop Effect';
@@ -76,7 +78,7 @@ I - as any Czech person - love beer and like to be in company of friends.</p>
 </ul>
  </main>
     <footer>
-        <p>&copy; 2025 Jakub Pavelka built with <a href="https://www.11ty.dev">11ty</a></p>
+        <p>&copy; 2025 Jakub Pavelka built with <a href="https://www.11ty.dev" target="_blank">11ty</a></p>
     </footer>
 </body>
 
