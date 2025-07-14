@@ -13,63 +13,54 @@
     <meta name="author" content="Jakub Pavelka">
     <meta name="keywords" content="Jakub, Pavelka, personal, website, portfolio">
     <meta name="theme-color" content="#ffffff">
-    <title>Jakub Pavelka - About Me</title>
+    <title>Jakub Pavelka - Hello</title>
 </head>
 
-<body class="flicker">
+<body>
     <header>
         <h2><a href="/">Jakub Pavelka</a></h2>
         <nav>
             <ul>
                 <li><a href="/main/about-me/">About Me</a></li>
-                <li><a href="https://rxresu.me/jakubpav/jakub-pavelka" target="_blank">CV</a></li>
+                <li><a href="/main/CV/" target="_blank">CV</a></li>
             </ul>
         </nav>
         <script>
-            let flicker = localStorage.getItem('flicker-store');
-            let flickerSwitch = function () {
-                let button = document.getElementById('stop-flicker-btn');
-                if (flicker === 'started' || flicker === undefined || flicker === null) {
-                    document.body.classList.remove('flicker');
-                    flicker = 'stopped';
-                    button.textContent = 'Start Effect';
-                } else {
-                    document.body.classList.add('flicker');
-                    button.textContent = 'Stop Effect';
-                    flicker = 'started';
-                }
-                localStorage.setItem('flicker-store', flicker);
-            }
-            document.body.addEventListener('dblclick', flickerSwitch);
+            document.body.classList.add('flicker');
+            setTimeout(() => { document.body.classList.remove('flicker'); }, 1250);
             document.addEventListener('scroll', (event) => {
                 document.body.classList.add('flicker');
-                setTimeout(() => { document.body.classList.remove('flicker'); }, 1500);
+                setTimeout(() => { document.body.classList.remove('flicker'); }, 1250);
             });
-            if (flicker === 'started') {
-                document.body.classList.add('flicker');
-                document.getElementById('stop-flicker-btn').textContent = 'Stop Effect';
-            } else {
-                document.body.classList.remove('flicker');
-                document.getElementById('stop-flicker-btn').textContent = 'Start Effect';
-            }
         </script>
     </header>
-    <main> <h1>About Me</h1>
-<p>I'm a 27-year-old programmer based in Prague, currently working at Siemens. I focus on <strong>modern C++</strong>, mostly in the context of embedded systems.</p>
-<p>Previously, I worked as a <strong>fullstack developer</strong> and have experience with backend systems and server infrastructure. I originally studied <strong>electrical engineering</strong> and worked as an <strong>electrician</strong> before moving fully into software.</p>
-<hr>
-<h2>Skills &amp; Tools</h2>
-<ul>
-<li><strong>Languages:</strong> <strong>C++</strong>, C, Python, JavaScript/TypeScript, SQL</li>
-<li><strong>Expiriences:</strong> <strong>Embedded systems</strong>, fullstack development, backend infrastructure</li>
-<li><strong>Tools:</strong> Git, CMake, Qt</li>
-</ul>
-<hr>
-<h2>Interests</h2>
-<p>I'm into a mix of tech and movement — I bike, play floorball regularly, and ski whenever I can.
-Music is a big part of my everyday life. There’s rarely a day without it. I’ve been playing <strong>guitar</strong> for a while and recently started learning <strong>piano</strong>, slowly but steadily.<br>
-I also enjoy traveling, even if it's not as frequent as I’d like.
-I - as any Czech person - love beer and like to be in company of friends.</p>
+    <main> <h1>Hello</h1>
+<p><strong>and welcome</strong> to my site. I know it's not that great but it's just here, I guess. Oh this site is supposed to be about me...</p>
+<h2>About Me</h2>
+<p>Well as I always say, I'm just an electrician that learned to program (right now I'm better programmer than electrician). And after I f***ed up collage - which was about cool robotics btw - I tried to get a job as electrician planning to apply collage for second time. But that didn't happen since I was, by mere luck, hired as a programmer. So since then I was never compelled to go to collage again. I like the work too much for it.</p>
+<h3>So, what I did since then?</h3>
+<p>Well basically this and that -- everything that would somehow need a computer (sometimes not even that) to work as well as some electrical installation/maintenance stuff.</p>
+<p>So here I am after 7 and something years of working, 27 me, currently employed at Siemens in Prague, developing software for industrial control system related device(s).</p>
+<p>But since you're here you're probably want to know more about my interests than what I do for living, but anyway you can checkout my <strong>CV</strong> up there in the navbar.</p>
+<h3>Who am I When I Don't Work?</h3>
+<p>Hmm, I'm not sure what to choose first...</p>
+<h4>Music</h4>
+<p>Well I love music, listening to it mainly, going to concerts, making songs... eh not that I would release something, rather playing guitar just for fun and recently learning to play piano. I'm not good musician even though I was learning guitar since I was 7. <strong>But I cannot imagine a day without listening to something.</strong> I don't have any specific genre, I grew up on rock and metal, nowadays its mainly punk, edm and and rap. But I keep my mind open in this and basically listen to everything I feel connection to.</p>
+<h4>Sports</h4>
+<p>Not that I am a big sports guy but I really like to skateboard and play floorball with friends. In winter I try to ski as much as possible and I would never say no to bike ride somewhere in hills. (mainly <strong>down</strong>hills :D)</p>
+<h4>Technical Stuff</h4>
+<p>Programming at first really was just a hobby for me and even if I do it for living there is always something I do with it for fun. I like to keep up with newest C++ standards and push it as much as possible. Still it's not all just C++, You have to know what is the best tool for the job (that's why this site is written in markdown). And I would be lying if I said that I'm not interested in information security (yes, yes... hacking), both software and hardware.</p>
+<h4>Social Stuff</h4>
+<p>I like beer as much as any person from Czechia, and it tastes best with friends in a cozy pub. I don't have many friends but those I have are the best including my two awesome brothers, the wise younger one and the clever older one.</p>
+<p>But that's almost all... but it not everything is only nice, is it?</p>
+<h4>The Sad Stuff</h4>
+<p>I don't even know if I should write this there but the truth is that mood swings and social awkwardness are really a part of my life that is not that funny. But nevertheless it's part of me which I have come to accept - to a certain point. Still, having dyslexia and ADHD doesn't help with my anxieties but after some time in therapy I can say I know how to help my self from the worst. And I always try to help others with same issues I was (am, still) facing.</p>
+<p>Because sometimes having debate and/or just simply talking about this is a way to help.</p>
+<br/>
+<p>Uf after that I feel little bit narcissistic, but somehow it feels good to talk to someone I have yet to meet. If You really were that patient and read this all, then thank you, stranger, for your attention and please excuse my english since it's really not my first language. :-)</p>
+<br/>
+<br/>
+<br/>
 <hr>
 <h2>Contact</h2>
 <ul>
